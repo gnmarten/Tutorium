@@ -1,5 +1,6 @@
 ## Spacy under Windows  
 
+The following will take up ca. 5 GB of harddrive space.  
 Install Anaconda  
 [https://docs.anaconda.com/anaconda/install/windows/](https://docs.anaconda.com/anaconda/install/windows/)  
 (We DO "recommend adding Anaconda to the PATH environment variable", da es sich so einfacher bedienen lässt.)  
@@ -12,7 +13,7 @@ C:\Users\**yourusername**\AppData\Local\Continuum\anaconda3
 ```
   
 Open Anaconda Navigator with “elevated permissions” (as administrator)  
-Create "new environment"/choose existing environment and open “terminal” from there  
+Create "new environment"/, give it a name without spaces and open “terminal” from there  
 [Optional: remove any existing/old Spacy installlations =<2.0.16 with "pip uninstall spacy" or through Anaconda Navigator (by removing Numpy)]  
 ```conda install -c conda-forge spacy
 python -m spacy info   
@@ -29,11 +30,30 @@ link` command with `--force`, or remove them from the data directory. Data path:
 python -m spacy link de_core_news_sm de
 ```
   
-in Windows, you may have to create the directories "en" and "de" manually by adding them as "New: shortcut" in:   
+in Windows, you may have to create the directories "en" and "de" manually by adding a link to the physical location of the language models as "New: shortcut" in:   
 ```
 C:\Users\**yourusername**\AppData\Local\Continuum\anaconda3\envs\python36\lib\site-packages\spacy\data 
 ```
 
+Open the commandline via the Anaconda Navigator Interface as follows:  
+
+Actually running Spacy in a Jupyter Notebook may require one to first install Jupyter via this command (if ipython and jupyter are not available for installation in Anaconda Navigator) --> replace myenv with the name of your environment.  
+```
+conda install -n myenv ipython jupyter
+```
+
+Some users may experience problems setting the Jupyter to their environment. In this case, the following might be necessary:  
+```
+conda install -c anaconda ipykernel
+python -m ipykernel install --user --name=myenv  #replace myenv with the name of your environment.
+```
+
+Installation of the module "pip install wordfreq" requires C++ to be installed via Visual Studio Tools for Windows. (This will take up an extra 5 Gb of harddrive space!) The system will install marisa-trie without moaning afterwards.  
+
+Installation of German Bert is dependent on installation of Pytorch via Anaconda.  
+```
+python -m spacy download de_trf_bertbasecased_lg
+```
 
 ## Other software
 
@@ -42,7 +62,7 @@ Es wäre von Vorteil, wenn man von zu Hause bereits die benötigten Software-Pak
 
  
 
--2. UGent VPN
+0. UGent VPN
 
 [https://helpdesk.ugent.be/vpn/](https://helpdesk.ugent.be/vpn/)
 
@@ -74,7 +94,8 @@ LanguageTool for LibreOffice
 
  
 
-3. RStudio Desktop Open Source
+3. R(evolutions) statistical software
+RStudio Desktop Open Source
 
 [https://rstudio.com/products/rstudio/#rstudio-desktop](https://rstudio.com/products/rstudio/#rstudio-desktop)
 
