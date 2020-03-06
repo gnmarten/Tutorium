@@ -1,11 +1,14 @@
 ## Spacy under Windows  
 
 The following will take up ca. 5 GB of harddrive space.  
-Install Anaconda  
-[https://docs.anaconda.com/anaconda/install/windows/](https://docs.anaconda.com/anaconda/install/windows/)  
+  
+Install [Anaconda](https://docs.anaconda.com/anaconda/install/windows/)  
 (We DO "recommend adding Anaconda to the PATH environment variable", da es sich so einfacher bedienen lässt.)  
-In Windows: edit “system variables” to add Anaconda to path  
-"Edit the system environment variables" --> "Environment variables" --> "User variables for administrator" --> "Path" --> "Edit" --> "New" -->  
+
+```
+If missing, in Windows: edit “system variables” to add Anaconda to path  
+"Edit the system environment variables" --> "Environment variables" --> "User variables for administrator" --> "Path" --> "Edit" --> "New" -->
+```  
 Add these as separate new lines  
 ```
 C:\Users\**yourusername**\AppData\Local\Continuum\anaconda3\Scripts  
@@ -15,6 +18,8 @@ C:\Users\**yourusername**\AppData\Local\Continuum\anaconda3
 Open Anaconda Navigator with “elevated permissions” (as administrator)  
 Create "new environment"/, give it a name without spaces and open “terminal” from there  
 [Optional: remove any existing/old Spacy installlations =<2.0.16 with "pip uninstall spacy" or through Anaconda Navigator (by removing Numpy)]  
+  
+Install spacy through Navigator or manually:  
 ```conda install -c conda-forge spacy
 python -m spacy info   
 python -m spacy download en_core_web_sm  
@@ -48,7 +53,7 @@ conda install -c anaconda ipykernel
 python -m ipykernel install --user --name=myenv  #replace myenv with the name of your environment.
 ```
 
-Installation of the module "pip install wordfreq" requires C++ to be installed via Visual Studio Tools for Windows. (This will take up an extra 5 Gb of harddrive space!) The system will install marisa-trie without moaning afterwards.  
+Installation of the module "pip install wordfreq" requires C++ Build Tools to be installed by downloading [Visual Studio Tools for Windows](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16) and then selecting C++ tools in the menu to be installed. (This will take up an extra 5 Gb of harddrive space!) The system will install marisa-trie without moaning afterwards.  
 
 Installation of German Bert is dependent on installation of Pytorch via Anaconda.  
 ```
