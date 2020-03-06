@@ -22,7 +22,7 @@
 ## Further stuff
 
 [Build a text's knowledge graph via Spacy](https://www.analyticsvidhya.com/blog/2019/10/how-to-build-knowledge-graph-text-using-spacy/)  
-[Explicit](https://github.com/zi-cat/explicit) [Blog](https://medium.com/@dangerous_teas/do-men-really-write-sh-ttier-sex-stories-than-women-183f5b920f2d)
+[Explicit](https://github.com/zi-cat/explicit) [Blog](https://medium.com/@dangerous_teas/do-men-really-write-sh-ttier-sex-stories-than-women-183f5b920f2d)  
 [Sentiment Analysis via Spacy Transformers (Demo adapted for German: untested)](https://colab.research.google.com/drive/1gKOjsWk2nAz4O4e1FFQQ8V_Imcw-hdV7)  
 [Background reading on NLP for German](https://corpora.linguistik.uni-erlangen.de/data/konvens/proceedings/papers/KONVENS2019_paper_55.pdf)  
 [SoMeWeTa/SoMaJo remedying Spacy shortcomings](https://datagoodie.com/blog/best-german-tokenizer/) [Repository](https://github.com/tsproisl/SoMeWeTa/issues/6)  
