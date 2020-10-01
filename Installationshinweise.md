@@ -30,13 +30,21 @@ python -m spacy validate
 --> If the last step shows:  
 "You may also want to overwrite the incompatible links using the `python -m spacy  
 link` command with `--force`, or remove them from the data directory. Data path: ..."  
+Execute the following command from the location %USERPROFILE%\Documents\python36\Lib\site-packages (or wherever your environment's packages are to be found). Navigate to this location and then copy it "as text". Then open an elevated CMD window and cd to C:\Users\gnmarten\Documents\python36\Lib\site-packages in order to execute
   
 ```python -m spacy link en_core_web_sm en  
 python -m spacy link de_core_news_sm de
 ```
-  
-in Windows, you may have to create the directories "en" and "de" manually by adding a link to the physical location of the language models as "New: shortcut" in:   
+This may raise another error Importing the numpy C-extensions failed." install numpy first.
+in Windows, you may have to create the directories "en" and "de" manually. 
+
+First check in what conda environment you installed spacy. This will vary according to whether you installed Anaconda with admin permissions or not and depending on the name of your environment
 ```
+conda info --envs
+```
+Go to this location through Windows Explorer, adding it to %USERPROFILE%\. (python36 is the name of my conda environment) Then, you an add a link to the physical location of the language models. You can do so via Windows Explorer, just add via right-mouse click "New: shortcut" in the approriate location. This will look like one of the following  
+```
+%USERPROFILE%\Documents\python36\lib\site-packages\spacy\data 
 C:\Users\**yourusername**\AppData\Local\Continuum\anaconda3\envs\python36\lib\site-packages\spacy\data 
 ```
 
